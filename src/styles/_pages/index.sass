@@ -1,0 +1,162 @@
+.home_slider
+	.owl-carousel
+		.item
+			img 
+				width: 100%
+			.title
+				h1 
+					font-size: 1.8rem
+					margin-bottom: 0
+				p 
+					font-size: 1rem
+					margin-bottom: 0
+		.owl-nav
+			margin-bottom: 2rem
+			button 
+				i 
+					display: block
+					width: 2rem
+					height: 2rem
+					+lh(2rem)
+	+media-breakpoint-up(md)
+		.owl-carousel
+			position: relative
+			.item
+				.title
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					display: flex
+					align-items: center
+					color: white
+					h1 
+						font-size: 2rem
+						margin-bottom: 0.8rem
+						max-width: 70%
+					p 
+						font-size: 1.3rem
+						font-weight: 100
+						max-width: 50%
+						line-height: 2rem
+.home_new
+	.page_title
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		text-align: center
+		padding: 3rem 0 3rem 0
+		h2
+			strong 
+				color: $tim
+			letter-spacing: 1px 
+			position: relative
+			margin-bottom: 0
+			margin-top: -1rem
+			&:after 
+				+pos(abs,null null -1rem 50%)
+				display: block
+				height: 3px 
+				width: 75px
+				content: ''
+				background: $tim
+				+transform(translateX(-50%))
+	.item
+		a 
+			text-decoration: none
+			figure
+				margin-top: 1rem
+				.blockimg
+					border-radius: 10px
+					overflow: hidden
+					position: relative
+					&:before
+						content: ''
+						display: block
+						width: 100%
+						height: 100%
+						position: absolute
+						top: 100%
+						transition: .4s all ease-in-out
+					&:after
+						content: ''
+						display: block
+						width: 100%
+						height: 100%
+						position: absolute
+						bottom: 100%
+						transition: .4s all ease-in-out
+					.conmat
+						display: flex
+						align-items: center
+						justify-content: center
+						position: absolute
+						width: 100%
+						height: 100%
+						font-size: 3rem
+						opacity: 0
+						color: #ffffff
+						transition: .5s all ease-in-out
+					img
+						width: 100%
+				figcapsion
+					h3 
+						margin-top: 1rem
+						margin-bottom: 0
+						font-size: 1.3rem
+						color: #000000
+					time 
+						font-size: 1rem
+						color: darken($whites,40%)
+					p 
+						margin-top: 0.5rem
+						font-size: 1rem
+						color: darken($whites,30%)
+			&:hover
+				.blockimg
+					.conmat
+						z-index: 10000
+						opacity: 1
+						color: #ffffff
+					&:before
+						top: 50%
+						background: rgba(0,0,0,0.5)
+					&:after
+						bottom: 50%
+						background: rgba(0,0,0,0.5)
+				figcapsion
+					h3 
+						color: darken($tim, 5%)
+					p 
+						color: #000000
+.home_clients
+	.owl-carousel
+		.item
+			padding: 1rem
+			margin-top: 1rem
+			img 
+				width: 100%
+section.home_links
+	background: $ngoc
+	min-height: 250px
+	display: flex
+	align-items: center
+	justify-content: center
+	h2 
+		font-size: 1.5rem
+		color: darken($ngoc, 20%)
+	.item
+		p 
+			color: lighten($ngoc, 30%)
+			margin-top: 1rem
+	a 
+		ul 
+			li 
+				i 
+					color: lighten($ngoc, 30%)
+					margin-top: 0.5rem
+	.taolao
+		h2
+			opacity: 0 
