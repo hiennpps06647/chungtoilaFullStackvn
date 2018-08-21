@@ -64,7 +64,21 @@ $(document).ready(function () {
 		margin: 10,
 		autoplay: true,
 		autoplayTimeout: 1000,
-		autoplayHoverPause: true
+		autoplayHoverPause: true,
+		responsive: {
+			0: {
+				items: 2
+			},
+			480: {
+				items: 3
+			},
+			768: {
+				items: 4
+			},
+			1000: {
+				items: 6
+			}
+		}
 	});
 	$('.play').on('click', function () {
 		owl.trigger('play.owl.autoplay', [1000]);
